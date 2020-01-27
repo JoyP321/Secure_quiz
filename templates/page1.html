@@ -1,16 +1,14 @@
 {% extends "layout.html" %}
 
-{% block title %}Page 1: Name{% endblock %}
+{% block title %}Question 1{% endblock %}
 
 {% block content %}
-  <h1>Page 1: What is your name?</h1>
+  <h1>Question one?</h1>
 
  <form action="/page2" method="POST">
-  First name:<br>
-  <input type="text" name="firstName">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastName">
+   <input type="radio" name="question1" value="1"> 1<br>
+  <input type="radio" name="question1" value="2"> 2<br>
+  <input type="radio" name="question1" value="3"> 3r<br><br>
   <input type="submit" value="Submit">
  </form> 
 
