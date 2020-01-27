@@ -1,16 +1,17 @@
+  
 {% extends "layout.html" %}
 
-{% block title %}Page 2: Ask for your favorite color{% endblock %}
+{% block title %}Question 2{% endblock %}
 
 {% block content %}
-  <h1>Page 2: Ask for favorite color</h1>
+  <h1>Question two?</h1>
 
- <form action="/page3" method="POST">
-  Favorite Color:<br>
-  <input type="text" name="favoriteColor">
+ <form action="/page2" method="POST">
+  <input type="radio" name="question2" value="1"> 1<br>
+  <input type="radio" name="question2" value="2"> 2<br>
+  <input type="radio" name="question2" value="3"> 3<br><br>
   <input type="submit" value="Submit">
  </form> 
-
 
 
 {% endblock %}
