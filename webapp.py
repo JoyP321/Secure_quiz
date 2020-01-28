@@ -26,16 +26,13 @@ def startOver():
 
 @app.route('/page1')
 def renderPage1():
-  if "question_1" in session:
-    print("hello")
-    return redirect('/page2')
   return render_template('page1.html')
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
     #TODO: save the first and last name in the session
-    session["question_1"]= request.form["question1"]
-    
+    if "question_1" not in session:
+      session["question_1"]= request.form["question1"]
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
