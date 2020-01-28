@@ -25,6 +25,7 @@ def startOver():
 @app.route('/page1')
 def renderPage1():
   if "question_2" in session:
+    print("hello")
     return redirect('/page2')
   return render_template('page1.html')
 
