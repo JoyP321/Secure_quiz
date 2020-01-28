@@ -14,6 +14,7 @@ app.secret_key=os.environ["SECRET_KEY"]; #SECRET_KEY is an environment variable.
 
 @app.route('/')
 def renderMain():
+    session.clear()
     return render_template('home.html')
 
 @app.route('/startOver')
