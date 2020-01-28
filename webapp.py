@@ -30,6 +30,7 @@ def renderPage1():
 def renderPage2():
     #TODO: save the first and last name in the session
     session["question_1"]= request.form["question1"]
+    
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
