@@ -57,7 +57,7 @@ def renderFinalPage():
     return render_template('finalPage.html', response = score())
   
 def score():
-  answers= {"Broccoli" : session["question_1"], "Q": session["question_2"], "5" : session["question_3"], "1300000": session["question_3"]}
+  answers= {"Broccoli" : session["question_1"], "Q": session["question_2"], "5" : session["question_3"], "1300000": session["question_4"]}
   totalCorrect=0
   feedback=""
   for a in answers:
