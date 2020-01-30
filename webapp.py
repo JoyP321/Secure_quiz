@@ -35,7 +35,7 @@ def renderPage2():
       session["question_1"]= request.form["question1"]
     return render_template('page2.html')
 
-@app.route('/page3',methods=['GET','POST'])
+@app.route('/finalPage',methods=['GET','POST'])
 def renderPage3():
     #TODO: save the favorite color in the session
     if "question_2" not in session:
