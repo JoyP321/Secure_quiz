@@ -56,7 +56,7 @@ def score():
 def questionScoreDisplay(yourAnswer, correctAnswer):
   toReturn = "You Answered: " + yourAnswer
   if yourAnswer!=correctAnswer:
-    toReturn+= ". That is incorrect, the correct answer is " + correctAnswer + ".\n"
+    toReturn+= ". That is incorrect, the correct answer is " + correctAnswer + ".\n "
     return toReturn
   toReturn+= ". That is correct!"
   return toReturn
