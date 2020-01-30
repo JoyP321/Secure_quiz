@@ -52,8 +52,8 @@ def renderPage4():
 @app.route('/finalPage',methods=['GET','POST'])
 def renderFinalPage():
     #TODO: save the favorite color in the session
-    if "question_3" not in session:
-      session["question_3"]= request.form["question3"]
+    if "question_4" not in session:
+      session["question_4"]= request.form["question4"]
     return render_template('finalPage.html', response = score())
   
 def score():
@@ -64,7 +64,7 @@ def score():
     feedback+=   Markup("<p>"+ questionScoreDisplay(answers[a], a) + "</p>")
     if a == answers[a]:
       totalCorrect+=1
-  feedback += Markup("<p>"+ "Total score: " + str(totalCorrect) + "/10" + "</p>")
+  feedback += Markup("<p>"+ "Total score: " + str(totalCorrect) + "/4" + "</p>")
   return feedback
   
 def questionScoreDisplay(yourAnswer, correctAnswer):
