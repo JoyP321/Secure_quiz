@@ -41,6 +41,26 @@ def renderPage3():
     if "question_2" not in session:
       session["question_2"]= request.form["question2"]
     return render_template('page3.html')
+  
+def score():
+  answers= {"Broccoli" : session["question_1"], "Q": session["question_2"]}
+  totalCorrect=0
+  feedback=""
+  for a in answers:
+    feedback+= questionScoreDisplay(a, answers[a])
+    if a == answers[a]:
+      totalCorrect+=1
+  feedback += "Total score: " +totalCorrect + "/10"
+  return feedback
+  
+def questionScoreDisplay(yourAnswer, correctAnswer):
+  toReturn = "You Answered: " + yourAnswer
+  if yourAnswer!=correctAnswer:
+    toReturn+= ". That is incorrect, the correct answer is " + correctAnswer
+    return toReturn
+  toReturn+= ". That is correct!"
+  return toReturn
+  
     
 if __name__=="__main__":
     app.run(debug=False)
