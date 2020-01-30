@@ -36,14 +36,14 @@ def renderPage2():
     return render_template('page2.html')
   
 @app.route('/page3',methods=['GET','POST'])
-def renderPage2():
+def renderPage3():
     #TODO: save the first and last name in the session
     if "question_2" not in session:
       session["question_2"]= request.form["question2"]
     return render_template('page3.html')
 
 @app.route('/finalPage',methods=['GET','POST'])
-def renderPage3():
+def renderFinalPage():
     #TODO: save the favorite color in the session
     if "question_3" not in session:
       session["question_3"]= request.form["question3"]
