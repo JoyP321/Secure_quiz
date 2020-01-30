@@ -25,6 +25,7 @@ a{
   padding: 5px;
   margin: 4px 2px;
   cursor: pointer;
+  display:block;
 }
 
 input[type=submit]{
