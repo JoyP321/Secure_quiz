@@ -34,16 +34,23 @@ def renderPage2():
     if "question_1" not in session:
       session["question_1"]= request.form["question1"]
     return render_template('page2.html')
+  
+@app.route('/page3',methods=['GET','POST'])
+def renderPage2():
+    #TODO: save the first and last name in the session
+    if "question_2" not in session:
+      session["question_2"]= request.form["question2"]
+    return render_template('page3.html')
 
 @app.route('/finalPage',methods=['GET','POST'])
 def renderPage3():
     #TODO: save the favorite color in the session
-    if "question_2" not in session:
-      session["question_2"]= request.form["question2"]
-    return render_template('page3.html', response = score())
+    if "question_3" not in session:
+      session["question_3"]= request.form["question3"]
+    return render_template('finalPage.html', response = score())
   
 def score():
-  answers= {"Broccoli" : session["question_1"], "Q": session["question_2"]}
+  answers= {"Broccoli" : session["question_1"], "Q": session["question_2"], "5" : session["question_3"]}
   totalCorrect=0
   feedback=""
   for a in answers:
