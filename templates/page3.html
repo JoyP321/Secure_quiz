@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Question 3{% endblock %}
+
+{% block content %}
+  <h1>How many territories does the US have?</h1>
+
+ <form action="/page4" method="POST">
+  <input type="radio" name="question3" value="5"> 5<br>
+  <input type="radio" name="question3" value="3"> 3<br>
+  <input type="radio" name="question3" value="7"> 7<br><br>
+  <input type="submit" value="Submit">
+ </form> 
+
+
+{% endblock %}
