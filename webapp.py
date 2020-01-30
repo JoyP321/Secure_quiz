@@ -47,10 +47,10 @@ def score():
   totalCorrect=0
   feedback=""
   for a in answers:
-    feedback+=  questionScoreDisplay(answers[a], a)
+    feedback+=   Markup("<p>"+ questionScoreDisplay(answers[a], a) + "</p>")
     if a == answers[a]:
       totalCorrect+=1
-  feedback += "Total score: " + str(totalCorrect) + "/10"
+  feedback += Markup("<p>"+ "Total score: " + str(totalCorrect) + "/10" + "</p>")
   return feedback
   
 def questionScoreDisplay(yourAnswer, correctAnswer):
