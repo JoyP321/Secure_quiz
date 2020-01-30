@@ -50,7 +50,7 @@ def score():
     feedback+= questionScoreDisplay(a, answers[a])
     if a == answers[a]:
       totalCorrect+=1
-  feedback += "Total score: " +totalCorrect + "/10"
+  feedback += "Total score: " + str(totalCorrect) + "/10"
   return feedback
   
 def questionScoreDisplay(yourAnswer, correctAnswer):
