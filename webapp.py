@@ -52,6 +52,8 @@ def renderPage4():
 @app.route('/finalPage',methods=['GET','POST'])
 def renderFinalPage():
     #TODO: save the favorite color in the session
+    if "question_1" not in session:
+      return render_template('finalPage.html', response = "you cannot access your old scores, please restart")
     if "question_4" not in session:
       session["question_4"]= request.form["question4"]
     return render_template('finalPage.html', response = score())
