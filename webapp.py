@@ -47,7 +47,7 @@ def score():
   totalCorrect=0
   feedback=""
   for a in answers:
-    feedback+= "\n" + questionScoreDisplay(answers[a], a)
+    feedback+=  questionScoreDisplay(answers[a], a)
     if a == answers[a]:
       totalCorrect+=1
   feedback += "Total score: " + str(totalCorrect) + "/10"
@@ -56,7 +56,7 @@ def score():
 def questionScoreDisplay(yourAnswer, correctAnswer):
   toReturn = "You Answered: " + yourAnswer
   if yourAnswer!=correctAnswer:
-    toReturn+= ". That is incorrect, the correct answer is " + correctAnswer + "."
+    toReturn+= ". That is incorrect, the correct answer is " + correctAnswer + ".\n"
     return toReturn
   toReturn+= ". That is correct!"
   return toReturn
