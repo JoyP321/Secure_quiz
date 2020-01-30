@@ -13,6 +13,11 @@ div#footer {
     text-align: center;
 }
 
+href{
+    text-decoration: none;
+    color: black;
+}
+
 input[type=submit]{
   background-color: #ffffff;
   border: 4px solid grey;
