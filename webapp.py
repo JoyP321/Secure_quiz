@@ -47,7 +47,7 @@ def score():
   totalCorrect=0
   feedback=""
   for a in answers:
-    feedback+= questionScoreDisplay(answers[a], a)+ "\n"
+    feedback+= "\n" + questionScoreDisplay(answers[a], a)
     if a == answers[a]:
       totalCorrect+=1
   feedback += "Total score: " + str(totalCorrect) + "/10"
