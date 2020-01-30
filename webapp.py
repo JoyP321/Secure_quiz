@@ -40,7 +40,7 @@ def renderPage3():
     #TODO: save the favorite color in the session
     if "question_2" not in session:
       session["question_2"]= request.form["question2"]
-    return render_template('page3.html')
+    return render_template('page3.html', response = score())
   
 def score():
   answers= {"Broccoli" : session["question_1"], "Q": session["question_2"]}
