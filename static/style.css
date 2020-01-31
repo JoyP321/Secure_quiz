@@ -35,7 +35,9 @@ a{
 
 img{
     display:inline-block;
-    width: 10%;
+    width: 33%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     
 }
 
