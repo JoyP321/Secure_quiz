@@ -34,7 +34,7 @@ a{
 }
 
 img{
-    display:block;
+    display:inline-block;
     width: 33%;
     
 }
