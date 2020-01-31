@@ -34,7 +34,9 @@ a{
 }
 
 img{
-    display:block;
+    display:inline-block;
+    width: 50%;
+    padding-left:25%
 }
 
 input[type=submit]{
