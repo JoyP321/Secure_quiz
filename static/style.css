@@ -34,8 +34,8 @@ a{
 }
 
 img{
-    display:inline;
-    width: 33%;
+    display:inline-block;
+    width: 10%;
     
 }
 
